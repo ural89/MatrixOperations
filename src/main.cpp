@@ -10,14 +10,9 @@ Renderer renderer;
 void DrawObject(Matrix objectTransformMatrix, int color)
 {
     renderer.SetConsoleColor(color);
-    // Matrix translateMatrix = {// move to origin a bit
-    //     {{1, 0, 0, 100},
-    //     {0, 1, 0, 30},
-    //     {0, 0, 1, 0},
-    //     {0, 0, 0, 1}} 
-    // };  
+
     Vector objectPosition = GetPositionVectorFromMatrix(objectTransformMatrix);//MultiplyMatrix(objectTransformMatrix, translateMatrix));
-    objectPosition[0] += 15;
+    objectPosition[0] += 15; //move to origin a bit 
     objectPosition[1] += 15;
 
     // renderer.RenderVector(objectPosition);
